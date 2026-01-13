@@ -1,6 +1,4 @@
-import com.codeborne.selenide.Configuration;
 import io.qameta.allure.Step;
-import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.By;
 
 import static com.codeborne.selenide.Selenide.$;
@@ -10,14 +8,6 @@ import static com.codeborne.selenide.Selenide.open;
 public class WebSteps {
 
     private static final String REPOSITORY = "an-ursu/qa_guru_junit";
-
-    @BeforeEach
-    void preconditions() {
-        Configuration.browserSize = "1920x1080";
-        Configuration.pageLoadStrategy = "eager";
-
-    }
-
 
     @Step("Открываем главную страницу")
     public void openMainPage() {
